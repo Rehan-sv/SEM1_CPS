@@ -28,7 +28,7 @@ Step 5: else
 Step 6: Print largest
 Step 7: Stop
 ----------------------------------------------------------------------------------------------------------------------
-Example 3: Repetition Algorithm (Print numbers from 1 to N)
+Example 3: Repetition Algorithm 	
 
 Algorithm for printing numbers from 1 to N
 Input: A positive integer N
