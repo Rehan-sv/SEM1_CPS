@@ -8,8 +8,5 @@ while withdrawal_amount != 0:
         print("Withdrawal successful, Remaining Balance:", balance)
     else:
         print("Insufficient Balance")
-
-    withdrawal_amount = int(input("Enter withdrawal amount (0 to stop): "))
-
 # Step 5: Print final balance
 print("Final Balance:", balance)
