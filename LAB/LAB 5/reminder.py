@@ -1,12 +1,14 @@
-num=int(input("enter a number : "))
-flag= False
-for i in range(2,num):
-    if(num%i==0):
-        flag = True
+num = int(input("Enter a number: "))
+flag = True
+
+for i in range(2, num):
+    if num % i == 0:
+        flag = False
         break
-    if(flag==False):
-        print("composite")
-        break
-    else:
-        print("prime")
+
+if flag == False:
+    print("composite")
+else:
+    print("prime")
+
         
