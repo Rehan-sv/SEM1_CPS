@@ -1,0 +1,6 @@
+a=("apple","orange","kiwi")
+b=list(a)
+removing_word=input("Enter the word which u want to remove: ")
+b.remove(removing_word)
+a=tuple(b)
+print(a)

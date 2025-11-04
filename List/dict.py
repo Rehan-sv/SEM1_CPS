@@ -1,0 +1,5 @@
+thisdict=dict(name ="John", age =36, country ="Norway")
+print(thisdict)
+print(thisdict["name"])
+print(thisdict["age"])
+print(thisdict["country"])

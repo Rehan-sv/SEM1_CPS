@@ -9,7 +9,6 @@ for i in range(s):
     length=len(a)
     total=sum(a)
     avg=total/length
-
 print(f"THE LIST OF MARKS:{a}")
 print(f"MAX MARKS:{higest}")
 print(f"MIN MARKS:{lowest}")

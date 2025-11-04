@@ -1,9 +1,8 @@
 text=input("enter the text:")
 clean_m=""
-is_whitespace=False
+flage=False
 for ch in text:
     if ch=="  "or ch=="\t":
-        if not is_whitespace:
             if len(clean_m)>0:
                 clean_m+=" "
             is_whitespace=True

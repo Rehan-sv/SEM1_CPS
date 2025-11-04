@@ -1,0 +1,6 @@
+a=("apple","orange","kiwi")
+b=list(a)
+words=input("Enter the words: ")
+b.append(words)
+a=tuple(b)
+print(a)
