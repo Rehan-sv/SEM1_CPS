@@ -1,0 +1,13 @@
+Q. Write a program that continuously asks the user to enter numbers until they enter 0. For each number, check if it is odd or even and maintain a count of how many odd and even numbers were entered. Print the counts when the user enters 0.
+
+Q. Create a program that asks the user to enter grades (0-100) one by one. Use a while loop to keep asking for grades until the user enters -1 to stop. Calculate and print the average grade and the corresponding letter grade using an if-elif-else ladder.
+
+Q. Write a program that simulates a simple ATM. The user can enter their PIN (assume it's always "1234"). Use a while loop to allow the user to withdraw money until they choose to exit. Check if the withdrawal amount is valid (less than or equal to the balance) and print the remaining balance after each transaction.
+
+Q. Write a program that continuously asks the user to enter a temperature in Celsius. Use a while loop to allow the user to convert temperatures until they choose to exit. Convert the temperature to Fahrenheit and print the result.
+
+Q. Create a program that asks the user for a number and generates its multiplication table (up to 10). Use a while loop to print each line of the table. Allow the user to enter a new number or exit the program.
+
+Q. Ask the user to enter a positive integer N. Use a while loop to print all even numbers from 0 to N. After printing, ask the user if they want to enter another number or exit.
+
+Q. Write a program that asks the user for a positive integer N and prints the Fibonacci sequence up to the Nth term. Use a while loop to generate and print the sequence.
