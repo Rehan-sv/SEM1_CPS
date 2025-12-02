@@ -1,0 +1,5 @@
+P101, Tomato, Vegetables, 20, 50
+P102, Apple, Fruits, 120, 30
+P103, Rice, Grains, 45, 80
+P104, Milk, Dairy, 25, 40
+P105, Banana, Fruits, 40, 60
