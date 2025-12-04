@@ -1,0 +1,12 @@
+Subject: Follow-Up on Your Recent Experience with {{company_name}}
+
+        Dear {{customer_name}},
+
+        Thank you for choosing {{company_name}}. We hope you had a pleasant experience. 
+        We would love to hear your feedback on {{product_or_service_used}}. Your insights are valuable in helping us improve.
+
+        Please feel free to reach out if you have any further questions or comments.
+
+        Best regards,
+        {{customer_service_rep_name}}
+        {{customer_service_contact_info}}

@@ -1,0 +1,12 @@
+Subject: Reminder: {{event_name}} on {{event_date}}
+
+        Dear {{recipient_name}},
+
+        This is a friendly reminder about the upcoming event, {{event_name}}, happening on {{event_date}}. 
+        The event will be held at {{event_location}}, and the festivities start at {{event_time}}.
+
+        We are excited to see you there!
+
+        Cheers,
+        {{organizer_name}}
+        {{organizer_contact_info}}

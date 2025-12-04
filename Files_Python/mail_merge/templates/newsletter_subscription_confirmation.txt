@@ -1,0 +1,12 @@
+Subject: Welcome to {{newsletter_name}}!
+
+        Dear {{subscriber_name}},
+
+        Thank you for subscribing to {{newsletter_name}}! We are excited to have you onboard and 
+        look forward to providing you with the latest news and updates about {{newsletter_topics}}.
+
+        Keep an eye on your inbox for our next issue.
+
+        Best wishes,
+        {{editor_name}}
+        {{newsletter_contact_info}}

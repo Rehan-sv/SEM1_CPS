@@ -1,0 +1,14 @@
+Subject: Your Job Interview with {{company_name}}
+
+        Dear {{applicant_name}},
+
+        We are excited to inform you that you have been selected for an interview for the {{job_title}} 
+        position at {{company_name}}. Your interview is scheduled for {{interview_date}} at {{interview_time}}. 
+        Please visit our office at {{office_address}}.
+
+        Please bring a copy of your resume and any other relevant documents.
+
+        Best regards,
+        {{hr_representative_name}}
+        {{hr_representative_position}}
+        {{company_name}}

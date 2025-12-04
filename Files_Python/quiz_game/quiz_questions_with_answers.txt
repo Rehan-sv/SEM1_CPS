@@ -1,0 +1,20 @@
+What is the main circuit board of a computer called?;Motherboard;Processor;Hard Drive;RAM;Motherboard
+What does CPU stand for?;Central Processing Unit;Computer Processing Unit;Central Performance Unit;Central Power Unit;Central Processing Unit
+Which device is used to display computer output?;Monitor;Keyboard;Mouse;Printer;Monitor
+What is the permanent memory built into your computer called?;ROM;RAM;SSD;HDD;ROM
+What does RAM stand for?;Random Access Memory;Read Access Memory;Run Access Memory;Rapid Action Memory;Random Access Memory
+What part of the computer is known as the "brain"?;CPU;Motherboard;Hard Drive;RAM;CPU
+Which computer hardware is used for typing?;Keyboard;Monitor;Mouse;Speaker;Keyboard
+What is the main function of a computer's hard drive?;Data Storage;Processing;Displaying Graphics;Managing Input Devices;Data Storage
+What does USB stand for?;Universal Serial Bus;United System Bus;Unique Serial Band;Universal System Board;Universal Serial Bus
+What is a common operating system for PCs?;Windows;Chrome;iOS;Android;Windows
+What does GPU stand for?;Graphics Processing Unit;General Processing Unit;Graphical Performance Unit;Gaming Processing Unit;Graphics Processing Unit
+Which component is also known as a microprocessor?;CPU;RAM;SSD;GPU;CPU
+What is the primary purpose of an operating system?;Manage computer resources;Create documents;Browse the internet;Play games;Manage computer resources
+What is a common input device for a computer?;Mouse;Printer;Monitor;Speaker;Mouse
+What do we call a network of connected computers?;Internet;Intranet;Extranet;Web;Internet
+What is the term for software designed to damage a computer's operation?;Virus;Program;Application;Tool;Virus
+Which is a popular programming language?;Python;English;Spanish;French;Python
+What does HTML stand for?;Hypertext Markup Language;Hyper Transfer Markup Language;High Text Machine Language;Hyper Tool Markup Language;Hypertext Markup Language
+What is the function of a router in a network?;Direct network traffic;Store data;Process data;Display information;Direct network traffic
+What does Wi-Fi stand for?;Wireless Fidelity;Wired Fidelity;Wireless Function;Wired Function;Wireless Fidelity
