@@ -16,7 +16,7 @@ def sorting_price(products):
     n = len(products)
     for i in range(n):
         for j in range(n - i - 1):
-            if products[j]["price"] > products[j + 1]["price"]:
+            if products[j]["price"] > products[j + 1]["price"]: 
                 swap(products, j, j + 1)
     return products
 
