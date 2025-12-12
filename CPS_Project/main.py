@@ -1,53 +1,71 @@
 import numpy as np
+import mylib  # Importing your 12-function library
 
-def case_study_demo():
-    print("--- 1. Data Structure & Algorithms (from twodim_base) ---")
+def run_case_study():
+    print("=== CASE STUDY: NUMPY 12-FUNCTION ANALYSIS ===\n")
+
+    # --- GROUP 1: CREATION & STRUCTURE ---
+    print("--- 1. Structure & Manipulation ---")
     
-    # Using 'eye' - Demonstrates Strided Memory Access
-    # (Explain: We create a 5x5 Identity matrix)
-    identity = np.eye(5)
-    print("\nIdentity Matrix (np.eye):\n", identity)
-
-    # Using 'diag' - Demonstrates Polymorphism
-    # (Explain: We extract the diagonal from the identity matrix)
-    diagonal_vals = np.diag(identity)
-    print("\nDiagonal Elements (np.diag):\n", diagonal_vals)
-
-    # Using 'fliplr' - Demonstrates Memory Views (Slicing)
-    # (Explain: We flip the matrix left-to-right efficiently)
-    flipped = np.fliplr(identity)
-    print("\nFlipped Matrix (np.fliplr):\n", flipped)
-
-    print("\n--- 2. Modular Design (Triangle Logic) ---")
+    # 1. EYE
+    identity = mylib.eye(3)
+    print(f"1. Identity Matrix (Eye):\n{identity}")
     
-    # Using 'triu' - Demonstrates Modularity
-    # (Explain: triu calls 'tri' internally to get a mask)
-    triangle = np.triu(np.ones((4, 4)), k=0)
-    print("\nUpper Triangle (np.triu):\n", triangle)
+    # 2. FLIPLR
+    print(f"\n2. Flipped Left-Right:\n{mylib.fliplr(identity)}")
+    
+    # 3. RAVEL
+    print(f"\n3. Flattened (Ravel):\n{mylib.ravel(identity)}")
+    
+    # 4. VSTACK (Stacking two identities)
+    stacked = mylib.vstack((identity, identity))
+    print(f"\n4. Vertically Stacked:\n{stacked}")
 
-    print("\n--- 3. File Handling (The Missing Piece) ---")
-    
-    # Using 'savetxt' - Demonstrates File Operations
-    # (Explain: Writing our array to a text file)
-    filename = "output_data.txt"
-    np.savetxt(filename, triangle, fmt='%d')
-    print(f"Successfully wrote data to '{filename}'")
 
-    # Prove it worked by reading it back
-    loaded_data = np.loadtxt(filename)
-    print("\nData read back from file:\n", loaded_data)
-    # ... inside run_viva_demo() ...
+    # --- GROUP 2: LOGIC & MODULARITY ---
+    print("\n--- 2. Logic & Modularity ---")
     
-    print("\n--- 4. Statistics (Optional Extra) ---")
-    data = np.array([[1, 2], [3, 4]])
+    # 5 & 6. TRI / TRIU
+    ones = np.ones((3,3))
+    upper = mylib.triu(ones)
+    print(f"5/6. Upper Triangle (Modular Reuse):\n{upper}")
     
-    # Demonstrate 'sum'
-    total = mylib.sum(data)
-    print(f"Sum of elements: {total}")
-    
-    # Demonstrate 'mean'
-    average = mylib.mean(data)
-    print(f"Mean of elements: {average}")
+    # 7. CLIP (Limiting values)
+    data = np.array([-5, 0, 5, 10, 15])
+    clipped = mylib.clip(data, 0, 10)
+    print(f"\n7. Clipped Data (0 to 10):\n{clipped}")
 
-if __name__ == "__main__":
-    case_study_demo()
+
+    # --- GROUP 3: STATS & SEARCH ---
+    print("\n--- 3. Statistics & Search ---")
+    
+    stats_data = np.array([[10, 20], [30, 40]])
+    print(f"Data:\n{stats_data}")
+    
+    # 8. SUM
+    print(f"8. Sum: {mylib.sum_wrapper(stats_data)}")
+    
+    # 9. MEAN
+    print(f"9. Mean: {mylib.mean_wrapper(stats_data)}")
+    
+    # 10. DIAG
+    print(f"10. Diagonal: {mylib.diag(stats_data)}")
+    
+    # 11. PTP (Range)
+    print(f"11. Peak-to-Peak (Range): {mylib.ptp(stats_data)}")
+    
+    # 12. ARGMAX (Index of max value 40)
+    flat_index = mylib.argmax(stats_data)
+    print(f"12. Index of Max Value: {flat_index}")
+
+
+    # --- FILE OPERATIONS ---
+    print("\n--- 4. File I/O (Persistence) ---")
+    filename = "case_study_data.txt"
+    np.savetxt(filename, stacked, fmt='%d')
+    print(f"Data saved to {filename}")
+    print("Reading back...")
+    print(np.loadtxt(filename))
+
+if __name__ == "main_":
+    run_case_study()
