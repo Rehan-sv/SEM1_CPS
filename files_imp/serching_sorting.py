@@ -1,8 +1,4 @@
-products = [
-    {"id": 101, "name": "Laptop", "price": 900, "stock": 12},
-    {"id": 205, "name": "Keyboard", "price": 25, "stock": 85},
-    {"id": 150, "name": "Monitor", "price": 180, "stock": 30},
-]
+
 query=int(input("Enter the Id to find: "))
 low_p=int(input("Enter the min range shoukd be : "))
 high_p=int(input("Enter the max range should be : "))

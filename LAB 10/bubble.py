@@ -14,4 +14,4 @@ arr=[64,34,25,12,22,11,90]
 bubble(arr)
 print("THE sorted array is:")
 for i in range(len(arr)):
-    print(arr[i], end=" ")
+    print(arr[i], end=" ")      
