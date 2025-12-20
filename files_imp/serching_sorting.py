@@ -1,4 +1,17 @@
-
+products = []
+c=int(input("enter the no of components:"))
+for i in range(c):
+    d={}
+    id=int(input("enter the id:"))
+    d["id"]=id
+    name=input("enter the name:")
+    d["name"]=name
+    price=int(input("enter the price:"))
+    d["price"]=price
+    stock=int(input("enter the stock:"))
+    d["stock"]=stock
+    products.append(d)
+    
 query=int(input("Enter the Id to find: "))
 low_p=int(input("Enter the min range shoukd be : "))
 high_p=int(input("Enter the max range should be : "))
