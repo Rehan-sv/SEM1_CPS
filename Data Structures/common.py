@@ -5,6 +5,7 @@ list_input = input("Enter numbers for first list: ").split()
 list1 = []
 for i in list_input:
     list1.append(int(i))
+print(list1)
 
 # Read second line as set
 set_input = input("Enter numbers for second set: ").split()
