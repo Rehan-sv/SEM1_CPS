@@ -36,7 +36,6 @@ compounds = {
     }
 }
 
-# -------- TASK 1 --------
 # Identify compound with highest efficacy
 def highest_efficacy(c):
     max_eff = 0
@@ -48,7 +47,7 @@ def highest_efficacy(c):
     return comp
 
 
-# -------- TASK 2 --------
+
 # Create a set of all side effects
 def all_side_effects(c):
     s = set()
@@ -58,7 +57,7 @@ def all_side_effects(c):
     return s
 
 
-# -------- TASK 3 --------
+
 # List compounds in a given trial phase
 def compounds_by_phase(c, phase):
     result = []
@@ -68,7 +67,6 @@ def compounds_by_phase(c, phase):
     return result
 
 
-# -------- TASK 4 --------
 # Investigator details
 def investigator_info(c, name):
     count = 0
@@ -80,7 +78,6 @@ def investigator_info(c, name):
     return count, conditions
 
 
-# -------- TASK 5 --------
 # Side effects reported by more than one compound
 def common_side_effects(c):
     effect_count = {}
@@ -94,8 +91,7 @@ def common_side_effects(c):
             result.append(e)
     return result
 
-
-# -------- OUTPUT SECTION --------
+    
 print("1. Compound with highest efficacy:", highest_efficacy(compounds))
 print("2. All side effects:", all_side_effects(compounds))
 
