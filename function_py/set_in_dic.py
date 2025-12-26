@@ -17,6 +17,7 @@ def add(l):
     author=input("enter the author name:")
     available=True
     l[book]={"author":author,"available":available}
+
 def borrow(l):
     t=input("enter the book to borrow:")
     if t in l:
@@ -27,6 +28,8 @@ def borrow(l):
             print("the book is already borrowed")
     else:
         print("the book is not in the library")
+
+
 def r(l):
     t=input("enter the book to return:")
     if t in l:

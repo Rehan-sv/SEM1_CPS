@@ -128,7 +128,7 @@ while True:
     elif choice == "6":
         with open("products.txt", "w") as f:
             for p in products:
-                f.write(f"{p['id']}, {p['name']}, {p['category']}, {p['price']}, {p['quantity']}\n")
+                f.write({p['id']}, {p['name']}, {p['category']}, {p['price']}, {p['quantity']})
 
         print("Data saved to file!\n")
 
