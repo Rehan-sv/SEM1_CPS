@@ -80,31 +80,30 @@ class Waitlist:
 
         self.head = self.head.next
 
-    # Reorder by Timestamp
     def reorderByTimestamp(self):
 
-        if self.head is None or self.head.next is None:
-            print("Already Sorted")
+        if self.head is None:
             return
 
-        swapped = True
+        current = self.head
 
-        while swapped:
+        while current:
 
-            swapped = False
-            temp = self.head
+            smallest = current
+            temp = current.next
 
-            while temp.next:
+            while temp:
 
-                if temp.timestamp > temp.next.timestamp:
-
-                    temp.pnr, temp.next.pnr = temp.next.pnr, temp.pnr
-                    temp.name, temp.next.name = temp.next.name, temp.name
-                    temp.timestamp, temp.next.timestamp = temp.next.timestamp, temp.timestamp
-
-                    swapped = True
+                if temp.timestamp < smallest.timestamp:
+                    smallest = temp
 
                 temp = temp.next
+
+            current.pnr, smallest.pnr = smallest.pnr, current.pnr
+            current.name, smallest.name = smallest.name, current.name
+            current.timestamp, smallest.timestamp = smallest.timestamp, current.timestamp
+
+            current = current.next
 
         print("Waitlist Reordered")
 
