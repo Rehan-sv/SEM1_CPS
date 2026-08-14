@@ -136,7 +136,7 @@ public void insertAtPosition(int data, int pos) {
 
     size++;
 }
-// Delete at Position
+   // Delete at Position
 public int deleteAtPosition(int pos) {
 
     if (isEmpty() || pos < 1 || pos > size)
