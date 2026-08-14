@@ -7,13 +7,14 @@ class CircularLinkedList:
     def __init__(self):
         self.head = None
 
-    # --- ADD OPERATIONS ---
+
     def add_first(self, data):
         new_node = CNode(data)
         if not self.head:
             self.head = new_node
             new_node.next = self.head
             return
+        
         curr = self.head
         while curr.next != self.head:
             curr = curr.next
