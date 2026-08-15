@@ -86,3 +86,50 @@ class SinglyLinkedList:
             nodes.append(str(curr.data))
             curr = curr.next
         print(" -> ".join(nodes) + " -> None")
+        
+        # ==========================================
+# DRIVER CODE (Paste this at the bottom of your file)
+# ==========================================
+
+if __name__ == "__main__":
+    # 1. Initialize the linked list
+    my_list = SinglyLinkedList()
+
+    print("--- TESTING ADD OPERATIONS ---")
+    my_list.add_last(10)
+    my_list.add_last(20)
+    my_list.add_last(30)
+    print("After adding 10, 20, 30 to the end:")
+    my_list.display()
+
+    my_list.add_first(5)
+    print("After adding 5 to the first position:")
+    my_list.display()
+
+    my_list.add_at(2, 15) 
+    print("After adding 15 at index 2:")
+    my_list.display()
+
+    print("\n--- TESTING REMOVE OPERATIONS ---")
+    my_list.remove_first()
+    print("After removing the first node:")
+    my_list.display()
+
+    my_list.remove_last()
+    print("After removing the last node:")
+    my_list.display()
+
+    my_list.remove_at(1) 
+    print("After removing the node at index 1:")
+    my_list.display()
+
+    print("\n--- TESTING REVERSE OPERATION ---")
+    # Adding a couple more nodes to make the reversal obvious
+    my_list.add_last(30)
+    my_list.add_last(40)
+    print("List before reversing:")
+    my_list.display()
+
+    my_list.reverse()
+    print("List after reversing:")
+    my_list.display()
