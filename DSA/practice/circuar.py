@@ -1,99 +1,183 @@
-class CNode:
+class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+
 
 class CircularLinkedList:
     def __init__(self):
         self.head = None
 
+    # Display
+    def display(self):
+        if self.head is None:
+            print("List is Empty")
+            return
 
+        temp = self.head
+        while True:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+            if temp == self.head:
+                break
+        print("(Head)")
+
+    # Add at Beginning
     def add_first(self, data):
-        new_node = CNode(data)
-        if not self.head:
-            self.head = new_node
-            new_node.next = self.head
-            return
-        
-        curr = self.head
-        while curr.next != self.head:
-            curr = curr.next
-        curr.next = new_node
-        new_node.next = self.head
-        self.head = new_node
+        new = Node(data)
 
+        if self.head is None:
+            self.head = new
+            new.next = self.head
+            return
+
+        temp = self.head
+        while temp.next != self.head:
+            temp = temp.next
+
+        new.next = self.head
+        temp.next = new
+        self.head = new
+
+    # Add at End
     def add_last(self, data):
-        new_node = CNode(data)
-        if not self.head:
-            self.head = new_node
-            new_node.next = self.head
-            return
-        curr = self.head
-        while curr.next != self.head:
-            curr = curr.next
-        curr.next = new_node
-        new_node.next = self.head
+        new = Node(data)
 
-    def add_at(self, index, data):
-        if index == 0:
+        if self.head is None:
+            self.head = new
+            new.next = self.head
+            return
+
+        temp = self.head
+        while temp.next != self.head:
+            temp = temp.next
+
+        temp.next = new
+        new.next = self.head
+
+    # Add at Kth Position (1-based)
+    def add_k(self, pos, data):
+        if pos == 1:
             self.add_first(data)
             return
-        new_node = CNode(data)
-        curr = self.head
-        for _ in range(index - 1):
-            if curr.next == self.head:
-                raise IndexError("Index out of bounds")
-            curr = curr.next
-        new_node.next = curr.next
-        curr.next = new_node
 
-    # --- REMOVE OPERATIONS ---
+        new = Node(data)
+        temp = self.head
+
+        for i in range(pos - 2):
+            if temp.next == self.head:
+                print("Invalid Position")
+                return
+            temp = temp.next
+
+        new.next = temp.next
+        temp.next = new
+
+    # Remove First
     def remove_first(self):
-        if not self.head:
+        if self.head is None:
+            print("List is Empty")
             return
+
         if self.head.next == self.head:
             self.head = None
             return
-        curr = self.head
-        while curr.next != self.head:
-            curr = curr.next
-        curr.next = self.head.next
+
+        temp = self.head
+        while temp.next != self.head:
+            temp = temp.next
+
+        temp.next = self.head.next
         self.head = self.head.next
 
+    # Remove Last
     def remove_last(self):
-        if not self.head:
+        if self.head is None:
+            print("List is Empty")
             return
+
         if self.head.next == self.head:
             self.head = None
             return
-        curr = self.head
-        while curr.next.next != self.head:
-            curr = curr.next
-        curr.next = self.head
 
-    def remove_at(self, index):
-        if not self.head:
+        prev = None
+        temp = self.head
+
+        while temp.next != self.head:
+            prev = temp
+            temp = temp.next
+
+        prev.next = self.head
+
+    # Remove Kth Position (1-based)
+    def remove_k(self, pos):
+        if self.head is None:
+            print("List is Empty")
             return
-        if index == 0:
+
+        if pos == 1:
             self.remove_first()
             return
-        curr = self.head
-        for _ in range(index - 1):
-            if curr.next == self.head:
-                raise IndexError("Index out of bounds")
-            curr = curr.next
-        if curr.next != self.head:
-            curr.next = curr.next.next
 
-    def display(self):
-        if not self.head:
-            print("None")
+        prev = None
+        temp = self.head
+
+        for i in range(pos - 1):
+            prev = temp
+            temp = temp.next
+
+            if temp == self.head:
+                print("Invalid Position")
+                return
+
+        prev.next = temp.next
+
+    # Reverse Circular Linked List
+    def reverse(self):
+        if self.head is None or self.head.next == self.head:
             return
-        nodes = []
+
+        prev = None
         curr = self.head
+        nxt = None
+        first = self.head
+
         while True:
-            nodes.append(str(curr.data))
-            curr = curr.next
-            if curr == self.head:
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
+
+            if curr == first:
                 break
-        print(" -> ".join(nodes) + " -> (Back to Head)")
+
+        first.next = prev
+        self.head = prev
+
+
+# ---------------- Driver Program ----------------
+
+cll = CircularLinkedList()
+
+cll.add_last(10)
+cll.add_last(20)
+cll.add_last(30)
+cll.display()
+
+cll.add_first(5)
+cll.display()
+
+cll.add_k(3, 15)
+cll.display()
+
+cll.remove_first()
+cll.display()
+
+cll.remove_last()
+cll.display()
+
+cll.remove_k(2)
+cll.display()
+
+cll.reverse()
+cll.display()
