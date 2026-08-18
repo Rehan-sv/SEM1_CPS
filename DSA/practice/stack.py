@@ -1,64 +1,28 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
 
 class Stack:
     def __init__(self):
-        self.top = None
-
-    # PUSH
-    def push(self, data):
-        new = Node(data)
-
-        new.next = self.top
-        self.top = new
-
-    # POP
+        self.head=None
+        
+    def push(self,data):
+        new=node(data)
+        if (self.head is None):
+            self.head=new
+    
     def pop(self):
-        if self.top is None:
-            print("Stack Underflow")
+        if self.head is None:
+            print("The list is empty")
             return
-
-        temp = self.top
-        self.top = self.top.next
-
-        return temp.data
-
-    # PEEK
-    def peek(self):
-        if self.top is None:
-            print("Stack is Empty")
-            return
-
-        return self.top.data
-
-    # DISPLAY
+        data=self.head.data
+        self.head=self.head.next
+        return data 
+    
     def display(self):
-        if self.top is None:
-            print("Stack is Empty")
-            return
-
-        temp = self.top
-
-        while temp is not None:
-            print(temp.data, end=" -> ")
-            temp = temp.next
-
-        print("None")
-
-
-# Example
-s = Stack()
-
-s.push(10)
-s.push(20)
-s.push(30)
-
-s.display()
-
-print("Popped:", s.pop())
-print("Top:", s.peek())
-
-s.display()
+        temp=self.head
+        while temp:
+            print(temp.data)
+            temp=temp.next
+    
