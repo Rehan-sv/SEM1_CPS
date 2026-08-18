@@ -84,7 +84,17 @@ class singleLinkedlist:
 
         temp.next=temp.next.next
     
-    
+    def reverse(self):
+        prev=None
+        temp=self.head
+
+        while temp:
+            next=temp.next
+            temp.next=prev
+            prev=temp
+            temp=next
+
+        self.head=prev
 
     def display(self):
         temp=self.head

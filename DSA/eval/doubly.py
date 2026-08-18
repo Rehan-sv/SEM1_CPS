@@ -107,6 +107,15 @@ class doublyLinkedList:
 
         temp.next=temp.next.next
         temp.next.prev=temp
+        
+    def reverse(self):
+        temp=self.head
+
+        while temp:
+            temp.next,temp.prev=temp.prev,temp.next
+            temp=temp.prev
+
+        self.head,self.tail=self.tail,self.head
 
 
     def display(self):
