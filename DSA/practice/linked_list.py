@@ -18,23 +18,23 @@ class SinglyLinkedList:
         if not self.head:
             self.head = new_node
             return
-        curr = self.head
-        while curr.next:
-            curr = curr.next
-        curr.next = new_node
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
 
     def add_at(self, index, data):
         if index == 0:
             self.add_first(data)
             return
         new_node = Node(data)
-        curr = self.head
+        temp = self.head
         for _ in range(index - 1):
-            if not curr:
+            if not temp:
                 raise IndexError("Index out of bounds")
-            curr = curr.next
-        new_node.next = curr.next
-        curr.next = new_node
+            temp = temp.next
+        new_node.next = temp.next
+        temp.next = new_node
 
     # --- REMOVE OPERATIONS ---
     def remove_first(self):
@@ -48,43 +48,43 @@ class SinglyLinkedList:
         if not self.head.next:
             self.head = None
             return
-        curr = self.head
-        while curr.next.next:
-            curr = curr.next
-        curr.next = None
+        temp = self.head
+        while temp.next.next:
+            temp = temp.next
+        temp.next = None
 
     def remove_at(self, index):
         if not self.head:
             return
         if index == 0:
             self.remove_first()
-            return
-        curr = self.head
+            return 
+        temp = self.head
         for _ in range(index - 1):
-            if not curr.next:
+            if not temp.next:
                 raise IndexError("Index out of bounds")
-            curr = curr.next
-        if curr.next:
-            curr.next = curr.next.next
+            temp = temp.next
+        if temp.next:
+            temp.next = temp.next.next
             
     def reverse(self):
         prev = None
-        curr = self.head
+        temp = self.head
         
-        while curr:
-            next_node = curr.next  # Store next node
-            curr.next = prev       # Reverse the pointer
-            prev = curr            # Move prev forward
-            curr = next_node       # Move curr forward
+        while temp:
+            next_node = temp.next  # Store next node
+            temp.next = prev       # Reverse the pointer
+            prev = temp            # Move prev forward
+            temp = next_node       # Move temp forward
             
         self.head = prev           # Update head to the last node
 
     def display(self):
         nodes = []
-        curr = self.head
-        while curr:
-            nodes.append(str(curr.data))
-            curr = curr.next
+        temp = self.head
+        while temp:
+            nodes.append(str(temp.data))
+            temp = temp.next
         print(" -> ".join(nodes) + " -> None")
         
         # ==========================================
