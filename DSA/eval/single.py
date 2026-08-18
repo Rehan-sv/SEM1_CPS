@@ -83,6 +83,8 @@ class singleLinkedlist:
             raise IndexError("out of bound")
 
         temp.next=temp.next.next
+    
+    
 
     def display(self):
         temp=self.head
