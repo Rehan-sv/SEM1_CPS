@@ -1,6 +1,4 @@
-"""
-Linked (node-based) implementation of the Binary Tree ADT.
-"""
+
 
 from collections import deque
 
